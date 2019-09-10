@@ -10,7 +10,7 @@
   
   <title>
     
-      Thinkan
+      tags | Thinkan
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -67,7 +67,7 @@
       
         <li class="list-item">
           
-            <a href="/" class="item-link active">首页</a>
+            <a href="/" class="item-link">首页</a>
           
         </li>
       
@@ -100,7 +100,7 @@
         
           <li class="menu-item">
             
-              <a href="/" class="menu-link mobile-active">首页</a>
+              <a href="/" class="menu-link">首页</a>
             
           </li>
         
@@ -127,49 +127,45 @@
   </div>
 </header>
 
-    <main class="app-body">
+    <div id="article-banner">
+  <h2>Tags</h2>
+  <p class="post-date">标签检索</p>
+</div>
+<main class="app-body">
+  <div id="tag-cloud">
+    
+      <a class="tag2" data-name="tag-心情">心情</a>
+    
+  </div>
   
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2019/09/10/have-a-nice-day/">没事来这喂喂鱼吧</a>
-      </h2>
-      <p class="article-date">September 10, 2019</p>
+    <div class="tag-list">
+      <h3 class="tag-name" id="tag-心情">心情</h3>
       
+        <ul class="tag-preview">
+          <li>
+            <a href="/2019/09/10/have-a-nice-day/">没事来这喂喂鱼吧</a>
+          </li>
+        </ul>
         
-  <a href="/tags#心情" >
-    <span class="tag-code">心情</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          ヾ-❀●◡●-ﾉ滴-儿童卡 
-
-累了来这里喂喂鱼吧，静静享受属于你的时光。不想做的事可以拒绝，做不到的事不用勉强，不喜欢的话假装没听见。人生不是用来讨好别人的，而是要善待自己。收拾好心情、再出发！
-        
-      </div>
-      <a class="more" href="/2019/09/10/have-a-nice-day/">全文</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2019/09/09/hello-world/">Hello World</a>
-      </h2>
-      <p class="article-date">September 9, 2019</p>
-      
-      <div class="article-summary">
-        
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer ...
-        
-      </div>
-      <a class="more" href="/2019/09/09/hello-world/">全文</a>
-    </article>
-  
-
-  
+    </div>
+    
 </main>
 
+<script>
+  (function () {
+    var url = 'http://thinkan.top/tags/index.html'
+    $('#article-banner').geopattern(url)
+    $('.header').removeClass('fixed-header')
 
+    var tag = location.hash.replace('#', '')
+    if (tag) {
+      var tagId = "#tag-" + tag;
+      $("html, body").animate({
+        scrollTop: $(tagId).offset().top 
+      }, 400)
+    }
+  })();
+</script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>

@@ -3,7 +3,7 @@ description: Thinkan's blog
 keyword: Thinkan, Android
 favicon: /css/images/logo.png
 
-excerpt_link: Read more
+excerpt_link: 全文
 
 menu:
  首页: /
@@ -17,7 +17,7 @@ highlight:
   tomorrow
 
 # catalog
-catalog: true
+catalog: false
 
 # donate
 donate: true
@@ -38,13 +38,13 @@ qrcode: true
 
 # uyan config
 # if you want to use uyan as your blog comment, plz remove/comment out gitment config
-baidu_id: 
+baidu_id: 116b4e912e38ec4afa8445b91230a3d7
 
 # disqus config
 disqus_shortname: 
 
 about: 
-  banner: http://file.muyutech.com/about.jpg
+  banner: /image/bg.jpg
   avatar: /css/images/logo.png
   description: "自强不息"
 #  weibo_username: Thinkan

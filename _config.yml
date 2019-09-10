@@ -4,12 +4,12 @@
 
 # Site
 title: Thinkan
-subtitle:
-description:
+subtitle: Android, Android开发
+description: Thinkan's blog
 keywords: Thinkan,Android,开发
 author: Thinkan
 language: zh-Hans
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -26,7 +26,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -65,6 +65,8 @@ tag_map:
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
+
+ba_track_id: 116b4e912e38ec4afa8445b91230a3d7
 # Pagination
 ## Set per_page to 0 to disable pagination
 per_page: 10

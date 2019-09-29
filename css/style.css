@@ -936,8 +936,8 @@ h2.article-head {
 .catalog-container {
   display: block;
   margin-left: 20px;
-  flex-basis: 280px;
-  -webkit-flex-basis: 280px;
+  flex-basis: 80px;
+  -webkit-flex-basis: 80px;
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
 }
@@ -952,6 +952,7 @@ h2.article-head {
 }
 .catalog-container .toc-main {
   padding-left: 20px;
+  padding-right: 20px;
   border-left: 1px solid #e5e5e5;
   width: 280px;
   box-sizing: border-box;

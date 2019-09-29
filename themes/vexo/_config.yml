@@ -46,13 +46,14 @@ disqus_shortname:
 about: 
   banner: /image/bg.jpg
   avatar: /css/images/logo.png
-  description: "自强不息"
+  description: 有些事情如果不在合适的年纪去做，就永远都不会做了。
 #  weibo_username: Thinkan
 #  twitter_username: Thinkan
   github_username: Thinkan
 #  zhihu_username: Thinkan
 #  douban_username: Thinkan
 #  linkedin_username:
+  email_username: thinkan@126.com
 
 # MathJax Support
 mathjax:

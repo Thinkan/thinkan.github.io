@@ -1,5 +1,5 @@
 # thinkan.github.io
-This is my WebSite [http://thinkan.top](http://thinkan.top) or [http://thinkan.github.io](http://thinkan.github.io)
+This is my WebSite [https://thinkan.top](https://thinkan.top) or [https://thinkan.github.io](https://thinkan.github.io)
 ## Thanks
 Powered by [Hexo](http://hexo.io)
 

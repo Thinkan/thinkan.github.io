@@ -62,6 +62,14 @@
             </span>
         </a>
     <% } %>
+	<% if (theme.about.email_username) { %>
+        <a class="icon-email" href="mailto:<%- theme.about.email_username %>" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stack-1x fa-inverse">邮</i>
+            </span>
+        </a>
+    <% } %>
   </section>
 </div>
 

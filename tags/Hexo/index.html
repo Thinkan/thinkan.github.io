@@ -11,7 +11,7 @@
   
   <title>
     
-      tags | Thinkan
+      Thinkan
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -129,61 +129,45 @@
 </header>
 
     <div id="article-banner">
-  <h2>Tags</h2>
-  <p class="post-date">标签检索</p>
+  <h2>Archives</h2>
+  <p class="post-date">文章归档</p>
 </div>
-<main class="app-body">
-  <div id="tag-cloud">
+<main class="app-body" id="archives">
+  
+  
+  
+    <section class="time-section">
+  <h1 class="section-year">
+    2019
+  </h1>
+  <div class="section-list">
     
-      <a class="tag3" data-name="tag-心情">心情</a>
     
-      <a class="tag0" data-name="tag-Hexo">Hexo</a>
+      <div class="section-list-item">
+        <a href="/2019/hexo-configuration/" class="archive-title">Hexo Configuration</a>
+        <p class="archive-date">10-12</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/have-a-nice-day/" class="archive-title">没事来这喂喂鱼吧</a>
+        <p class="archive-date">09-10</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/hello-world/" class="archive-title">Hello World</a>
+        <p class="archive-date">09-09</p>
+      </div>
     
   </div>
+</section>
   
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-心情">心情</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/2019/have-a-nice-day/">没事来这喂喂鱼吧</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-Hexo">Hexo</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/2019/hello-world/">Hello World</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/2019/hexo-configuration/">Hexo Configuration</a>
-          </li>
-        </ul>
-        
-    </div>
-    
 </main>
 
 <script>
   (function () {
-    var url = 'http://thinkan.top/tags/index.html'
-    $('#article-banner').geopattern(url)
-    $('.header').removeClass('fixed-header')
-
-    var tag = location.hash.replace('#', '')
-    if (tag) {
-      var tagId = "#tag-" + tag;
-      $("html, body").animate({
-        scrollTop: $(tagId).offset().top 
-      }, 400)
-    }
+    var url = 'http://thinkan.top/tags/Hexo/index.html';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
   })();
 </script>
     <div class="scroll-top">

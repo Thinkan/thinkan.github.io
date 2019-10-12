@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Thinkan&#39;s blog">
+  <meta name="keyword" content="Thinkan, Android">
+  <meta name="google-site-verification" content="6jej_kTWDvGbTKnNXUPgwTNmtrfBDpip0z8t-ARzGzw">
+  
+    <link rel="shortcut icon" type="image/ico" href="/css/images/logo.png">
+  
+  <title>
+    
+      Hexo Configuration | Thinkan
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Thinkan</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">首页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">首页</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>Hexo Configuration</h2>
+  <p class="post-date">2019-10-12</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p>在使用Hexo搭建个人网站时遇到的一些配置问题，经查阅参考网络资料，验证解决后整理记录下来，留作备忘，供大家参考。</p>
+<h3 id="1-修改文章链接"><a href="#1-修改文章链接" class="headerlink" title="1.修改文章链接"></a>1.修改文章链接</h3><p>我发布的文章链接太长，能不能修改呢？可以。</p>
+<p>Hexo默认是以“你的站点名+年/月/日+文章标题名”展示的，你可以通过修改根目录下的_config.yml配置文件来改变链接格式。找到permalink字段，它原本是这样的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: :year/:month/:day/:title/</span><br></pre></td></tr></table></figure>
+
+<p>如果你想以“你的站点名+文章标题”显示，你可以修改成这样。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: :title/</span><br></pre></td></tr></table></figure>
+
+<p>（参考来源：<a href="https://www.cnblogs.com/php-linux/p/8493181.html" target="_blank" rel="noopener">cnblogs</a>）</p>
+<h3 id="2-提交搜索引擎收录"><a href="#2-提交搜索引擎收录" class="headerlink" title="2.提交搜索引擎收录"></a>2.提交搜索引擎收录</h3><p>这里以Google为例，注册登录<a href="https://search.google.com/search-console?utm_source%3Dabout-page" target="_blank" rel="noopener">Google Search Console</a></p>
+<h5 id="2-1-添加资源"><a href="#2-1-添加资源" class="headerlink" title="2.1 添加资源"></a>2.1 添加资源</h5><p><img src="/image/GoogleSearchConsole1.png" alt="添加资源"></p>
+<p>这里有两种资源类型：网域和网址前缀。因网域需要验证DNS,所以我这里是以网址前缀方式添加的网址，这里大家根据自己情况自行添加。</p>
+<h5 id="2-2-进行验证"><a href="#2-2-进行验证" class="headerlink" title="2.2 进行验证"></a>2.2 进行验证</h5><p>验证的目的是证明你的身份，相当于对其授权，然后才可进行收录。</p>
+<p>目前Google提供5种验证方式，可以使用其中一种验证，也可以使用多种方式联合验证，官方推荐多种验证。</p>
+<p>这五种验证方式是：</p>
+<ul>
+<li>HTML文件</li>
+<li>HTML标记</li>
+<li>Google Analytics(分析)</li>
+<li>Google Tag Manager</li>
+<li>域名提供商</li>
+</ul>
+<p>其中HTML文件验证是Google帮你的站点生成一个html文件，你需要下载这个文件，不要做任何修改，并把其上传到你的站点根目录下。(你可以把其放在source文件夹下，并在_config.yml中的skip_render字段中配置白名单，避免Hexo对其渲染)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">skip_render: </span><br><span class="line">            - <span class="string">'README.md'</span></span><br><span class="line">            - <span class="string">'404.html'</span></span><br><span class="line">            - <span class="string">'google-xxxxxx.html'</span></span><br></pre></td></tr></table></figure>
+
+<p>HTML标记验证法则是Google生成标记代码，你把它放到你网站<code>&lt;head&gt;&lt;/head&gt;</code>标签内就好了,其格式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta name=<span class="string">"google-site-verification"</span> content=<span class="string">"5aej_kTWDvPgwTNmtrfBDpip0z8t-ARz8Gzw"</span>&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+
+<p>我在这里是采用了HTML文件和HTML标记两种方式验证的，上传或者添加好代码之后，点击验证，如果你没配置错误的话，这时候应该很快显示验证通过了。是不是想要立马到搜索引擎上搜索一下自己的网站呢，不过别着急，一般是需要24小时的时间才可以查看数据的，所以耐心等待吧！</p>
+<h3 id="3-站点地图"><a href="#3-站点地图" class="headerlink" title="3.站点地图"></a>3.站点地图</h3><p>站点地图是一个网站所有链接的容器。随着网站规模越大层次越深，搜索引擎很难抓取网站数据，通过站点地图则可以很好的给搜索引擎指明方向，更好的收录我们的页面。</p>
+<h5 id="3-1-安装插件"><a href="#3-1-安装插件" class="headerlink" title="3.1 安装插件"></a>3.1 安装插件</h5><p>打开站点根目录，打开命令行，分别执行下面代码安装Google和百度的站点地图插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save 		//Gooogle</span><br><span class="line">$ npm install hexo-generator-baidu-sitemap --save	//百度</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-2-添加配置"><a href="#3-2-添加配置" class="headerlink" title="3.2 添加配置"></a>3.2 添加配置</h5><p>在根目录_config.yml中添加站点地图的配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Plugins:</span><br><span class="line">- hexo-generator-baidu-sitemap</span><br><span class="line">- hexo-generator-sitemap</span><br><span class="line"></span><br><span class="line">baidusitemap:</span><br><span class="line">    path: baidusitemap.xml</span><br><span class="line">sitemap:</span><br><span class="line">    path: sitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>配置好了，重新部署一下我们就可以看到public目录下生成了baidusitemap.xml和sitemap.xml。这时候重新发布就可以了。如果没有看到生成站点地图，还请排查一下问题吧。</p>
+<h5 id="3-3-上传搜索引擎"><a href="#3-3-上传搜索引擎" class="headerlink" title="3.3 上传搜索引擎"></a>3.3 上传搜索引擎</h5><p>打开Google Search Console控制台，找到站点地图，确保你的站点地图能访问到。把相应的网址提交到你的控制台上就可以了。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#Hexo" >
+    <span class="tag-code">Hexo</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2019/have-a-nice-day/">
+        <span class="nav-arrow">← </span>
+        
+          没事来这喂喂鱼吧
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- No Comment -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-修改文章链接"><span class="toc-nav-text">1.修改文章链接</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-提交搜索引擎收录"><span class="toc-nav-text">2.提交搜索引擎收录</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-1-添加资源"><span class="toc-nav-text">2.1 添加资源</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-2-进行验证"><span class="toc-nav-text">2.2 进行验证</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-站点地图"><span class="toc-nav-text">3.站点地图</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3-1-安装插件"><span class="toc-nav-text">3.1 安装插件</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3-2-添加配置"><span class="toc-nav-text">3.2 添加配置</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3-3-上传搜索引擎"><span class="toc-nav-text">3.3 上传搜索引擎</span></a></li></ol></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://thinkan.top/2019/hexo-configuration/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script>
+    var _baId = '116b4e912e38ec4afa8445b91230a3d7';
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

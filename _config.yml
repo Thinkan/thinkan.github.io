@@ -15,7 +15,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://thinkan.top
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:title/ # :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -29,6 +29,7 @@ i18n_dir: :lang
 skip_render: 
             - 'README.md'
             - '404.html'
+            - 'google75f5a401e15afb71.html'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -79,6 +80,15 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: vexo
 
+Plugins:
+- hexo-generator-baidu-sitemap
+- hexo-generator-sitemap
+
+baidusitemap:
+    path: baidusitemap.xml
+sitemap:
+    path: sitemap.xml
+       
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

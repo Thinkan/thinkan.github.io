@@ -2,7 +2,7 @@ author: Thinkan # 作者
 description: Thinkan's blog
 keyword: Thinkan, Android
 favicon: /css/images/logo.png
-
+google_site: 6jej_kTWDvGbTKnNXUPgwTNmtrfBDpip0z8t-ARzGzw
 excerpt_link: 全文
 
 menu:
@@ -17,7 +17,7 @@ highlight:
   tomorrow
 
 # catalog
-catalog: false
+catalog: true
 
 # donate
 donate: true
@@ -44,7 +44,7 @@ baidu_id: 116b4e912e38ec4afa8445b91230a3d7
 disqus_shortname: 
 
 about: 
-  banner: /image/bg.jpg
+  banner: /image/about.jpg
   avatar: /css/images/logo.png
   description: 有些事情如果不在合适的年纪去做，就永远都不会做了。
 #  weibo_username: Thinkan

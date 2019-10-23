@@ -4,6 +4,11 @@
       <div class="logo"></div>
       <span><%- config.title %></span>
     </a>
+	
+	<div class="weather-parent">
+		<div id="tp-weather-widget"></div>
+	</div>
+	
     <ul class="right-list">
       <% for(name in theme.menu) { %>
         <li class="list-item">
@@ -14,12 +19,15 @@
           <% } %>
         </li>
       <% } %>
+	  
     </ul>
+	
     <div class="menu">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </div>
+	
     <div class="menu-mask">
       <ul class="menu-list">
         <% for(name in theme.menu) { %>
@@ -33,5 +41,6 @@
         <% } %>
       </ul>
     </div>
+	
   </div>
 </header>

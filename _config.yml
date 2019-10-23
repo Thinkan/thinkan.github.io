@@ -80,6 +80,11 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: vexo
 
+# 新增搜索页面  
+search:
+    path: search.xml
+    field: all
+    
 Plugins:
 - hexo-generator-baidu-sitemap
 - hexo-generator-sitemap

@@ -466,6 +466,13 @@ h2.article-head {
   text-decoration: none;
   color: #7f8c8d;
 }
+.weather-parent {
+  display: inline-block;
+  max-width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 30px;
+}
 .mobile-active {
   color: #42b983;
 }

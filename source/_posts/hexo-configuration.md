@@ -3,6 +3,7 @@ title: Hexo Configuration
 date: 2019-10-12 11:23:08
 tags: Hexo
 catalog: true
+top: 0
 ---
 在使用Hexo搭建个人网站时遇到的一些配置问题，经查阅参考网络资料，验证解决后整理记录下来，留作备忘，供大家参考。
 

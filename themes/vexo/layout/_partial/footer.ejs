@@ -1,9 +1,16 @@
 <footer class="app-footer">
   <p class="copyright">
-    &copy; <%= new Date().getFullYear() %> | Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-  </p>
+    &copy; <%= new Date().getFullYear() %> | Powered by <a href="https://hexo.io" target="_blank">Hexo</a>&nbsp;|&nbsp;
+	<% if(is_home()|| path.replace('/index.html', '')== 'tags'|| path.replace('/index.html', '')== 'archives'|| path.replace('/index.html', '')== 'about'){ %>
+        <span id="busuanzi_container_site_uv">
+			Site <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> Hits 
+		</span>
+    <% } else { %>
+         Page <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Hits
+    <% } %>
+</p>
 </footer>
-
+    
 <script>
   function async(u, c) {
     var d = document, t = 'script',
@@ -53,5 +60,20 @@
     })();
 </script>
 <% } %>
+<%- js('js/search') %>
+<% if (config.search) { %>
+   <script type="text/javascript">      
+     var search_path = "<%= config.search.path %>";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "<%= config.root %>" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+<% } %>
 <%- js('js/script') %>
 <%- js('js/weather') %>
+<%- js('js/baidupush') %>
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

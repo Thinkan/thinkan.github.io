@@ -71,6 +71,14 @@
 	</div>
 	
     <ul class="right-list">
+		<li class="list-item">
+			<div id="site_search">
+			   <div class="form-group">
+				<input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+			   </div>  
+			  <div id="local-search-result" class="st-search-input st-default-search-input form-control"></div>
+		  </div>
+	   </li>
       
         <li class="list-item">
           
@@ -138,7 +146,34 @@
 </header>
 
     <main class="app-body">
+
+
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/have-a-nice-day/">没事来这喂喂鱼吧</a>
+      </h2>
+      <p class="article-date">September 10, 2019</p>
+      
+	  <span class="tag-code">置顶</span>
+        
+  <a href="/tags#心情" >
+    <span class="tag-code">心情</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          ヾ-❀●◡●-ﾉ滴-儿童卡(PS:需要允许运行Flash)
+
+&emsp;&emsp;累了来这里喂喂鱼吧，静静享受属于你的时光。不想做的事可以拒绝，做不到的事不用勉强，不喜欢的话假装没听见。人生不是用来讨好别人的，而是要善待自己。收拾好心情、再出发！
+        
+      </div>
+      <a class="more" href="/2019/have-a-nice-day/">全文</a>
+    </article>
   
+
+  
+	
     <article class="article-card">
       <h2 class="article-head">
         <a href="/2019/hexo-configuration/">Hexo Configuration</a>
@@ -160,32 +195,14 @@ Hexo默认是以“你的站点名+年/月/日+文章标题名”展示的，你
       </div>
       <a class="more" href="/2019/hexo-configuration/">全文</a>
     </article>
+	
   
+	
+  
+	
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2019/have-a-nice-day/">没事来这喂喂鱼吧</a>
-      </h2>
-      <p class="article-date">September 10, 2019</p>
-      
-        
-  <a href="/tags#心情" >
-    <span class="tag-code">心情</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          ヾ-❀●◡●-ﾉ滴-儿童卡(PS:需要允许加载脚本和Flash)
-
-&emsp;&emsp;累了来这里喂喂鱼吧，静静享受属于你的时光。不想做的事可以拒绝，做不到的事不用勉强，不喜欢的话假装没听见。人生不是用来讨好别人的，而是要善待自己。收拾好心情、再出发！
-        
-      </div>
-      <a class="more" href="/2019/have-a-nice-day/">全文</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2019/hello-world/">Hello World</a>
+        <a href="/2019/hello-world/">Hexo Hello World</a>
       </h2>
       <p class="article-date">September 9, 2019</p>
       
@@ -202,6 +219,7 @@ Hexo默认是以“你的站点名+年/月/日+文章标题名”展示的，你
       </div>
       <a class="more" href="/2019/hello-world/">全文</a>
     </article>
+	
   
 
   
@@ -213,7 +231,7 @@ Hexo默认是以“你的站点名+年/月/日+文章标题名”展示的，你
 </div>
     <footer class="app-footer">
   <p class="copyright">
-    &copy; 2019 | Powered by <a href="https://hexo.io" target="_blank">Hexo | </a>
+    &copy; 2019 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a>&nbsp;|&nbsp;
 	
         <span id="busuanzi_container_site_uv">
 			Site <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> Hits 
@@ -271,9 +289,22 @@ Hexo默认是以“你的站点名+年/月/日+文章标题名”展示的，你
     })();
 </script>
 
+<script src="/js/search.js"></script>
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
 <script src="/js/script.js"></script>
 <script src="/js/weather.js"></script>
 <script src="/js/baidupush.js"></script>
+
+
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   </body>
 </html>

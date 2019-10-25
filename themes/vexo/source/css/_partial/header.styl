@@ -137,8 +137,19 @@
 .mobile-active
   color: color-primary
   
+input
+  outline:none; 
+  
+.st-search-input
+  text-indent: 10px
+  border-radius: 10px;
+  background:transparent
+  background-image: url("/css/images/searchbar.svg"); 
+  background-repeat: no-repeat; 
+  background-position: 95%;  
+ 	
 #local-search-result
-  background: rgba(199,237,204,0.98)
+  background: rgba(199,237,204,0.95)
   margin-top: 20px
   position: fixed;
   scroll:auto;
@@ -150,6 +161,7 @@ ul.search-result-list
   padding-left: 10px;
 
 a.search-result-title
+  margin: 20px 10px 20px 10px
   font-weight: bold;
 
 p.search-result

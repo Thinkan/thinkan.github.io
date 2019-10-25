@@ -77,7 +77,6 @@ var searchFunc = function(path, search_id, content_id) {
                             });
                         } else {
                             isMatch = false;
-							str += "没有找到相关内容哦！"
                         }
                         // show search results
                         if (isMatch) {
@@ -111,10 +110,11 @@ var searchFunc = function(path, search_id, content_id) {
                                 str += "<p class=\"search-result\">" + match_content + "...</p>"
                             }
                             str += "</li>";
-                        }else{
-							
-						}
+                        }
                     });
+					if(str =='<ul class=\"search-result-list\">'){
+						str+= "没有找到相关内容，换个关键词试试？";
+					}
                     str += "</ul>";
                     $resultContent.innerHTML = str;
                 });

@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Android开启调试模式</title>
+      <link href="/2020/06/Android-USB-Debugging-Mode/"/>
+      <url>/2020/06/Android-USB-Debugging-Mode/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>在Android开发过程中，开启移动设备的调试模式可以帮助我们快速运行和调试程序。</p></blockquote><h3 id="USB调试"><a href="#USB调试" class="headerlink" title="USB调试"></a>USB调试</h3><p> 注意！如果是Android开发板，要选择OTG USB接口，注意参照一下板子的规格书。</p><h5 id="常规设置"><a href="#常规设置" class="headerlink" title="常规设置"></a>常规设置</h5><p>在电脑和移动设备使用USB连接的情况下，我们打开 设置 -&gt; 更多设置 -&gt; 开发者选项，开启开发者选项，找到下方调试选项，打开USB调试开关，此时下拉状态栏，如果看到有“已连接到USB调试”的会话，说明USB调试开启成功。</p><h5 id="USB模式切换"><a href="#USB模式切换" class="headerlink" title="USB模式切换"></a>USB模式切换</h5><p>有些Android设备没有USB调试开关,检查一下开发者选项中是否有USB模式切换选项，一般有3个选项，Device模式，Host模式和跳帽模式。连接到OTG USB接口,打开USB模式切换选项，选中Device模式，下拉状态栏，看是否有“已连接到USB调试”会话，如果有的话，说明开启成功。</p><h3 id="WIFI调试"><a href="#WIFI调试" class="headerlink" title="WIFI调试"></a>WIFI调试</h3><p>如果USB调试模式不可用的情况下也可以使用WIFI调试，WIFI调试分两种情况，一种是设备默认开启了5555端口，可以使用adb命令直连，另一种是需要开启5555端口后在使用adb连接。在同一局域网下，查看一下移动设备IP地址，在电脑端尝试使用adb命令连接下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb connect 192.168.x.x</span><br></pre></td></tr></table></figure><p>如果连接成功，说明设备已开启了5555端口，可以直接通过电脑进行安装和调试程序。</p><p>如果提示连接超时，还需要下载<a href="https://github.com/jackpal/Android-Terminal-Emulator" target="_blank" rel="noopener">Android-Terminal-Emulator</a>客户端，使用命令开启5555端口</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">su </span><br><span class="line">setprop service.adb.tcp.port 5555 </span><br><span class="line">stop adbd </span><br><span class="line">start adbd</span><br></pre></td></tr></table></figure><p>执行完命令后，在使用adb connect 命令连接即可。</p><p>USB有线连接传输速度比WIFI连接快很多，优先推荐使用USB连接，可以根据情况而定。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> 设置 </tag>
+            
+            <tag> USB调试模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>React Native 获取App版本号</title>
       <link href="/2019/10/react-native-get-app-version/"/>
       <url>/2019/10/react-native-get-app-version/</url>

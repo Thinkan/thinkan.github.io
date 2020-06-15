@@ -18,7 +18,7 @@
   <meta name="theme-color" content="#ffffff">
   <title>
     
-      Hexo Configuration | Thinkan
+      Android开启调试模式 | Thinkan
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -152,8 +152,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>Hexo Configuration</h2>
-  <p class="post-date">2019-10-12</p>
+  <h2>Android开启调试模式</h2>
+  <p class="post-date">2020-06-15</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -161,52 +161,37 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>在使用Hexo搭建个人网站时遇到的一些配置问题，经查阅参考网络资料，验证解决后整理记录下来，留作备忘，供大家参考。</p>
-<h3 id="1-修改文章链接"><a href="#1-修改文章链接" class="headerlink" title="1.修改文章链接"></a>1.修改文章链接</h3><p>我发布的文章链接太长，能不能修改呢？可以。</p>
-<p>Hexo默认是以“你的站点名+年/月/日+文章标题名”展示的，你可以通过修改根目录下的_config.yml配置文件来改变链接格式。找到permalink字段，它原本是这样的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: :year/:month/:day/:title/</span><br></pre></td></tr></table></figure>
+    <section class="markdown-content"><blockquote>
+<p>在Android开发过程中，开启移动设备的调试模式可以帮助我们快速运行和调试程序。</p>
+</blockquote>
+<h3 id="USB调试"><a href="#USB调试" class="headerlink" title="USB调试"></a>USB调试</h3><p> 注意！如果是Android开发板，要选择OTG USB接口，注意参照一下板子的规格书。</p>
+<h5 id="常规设置"><a href="#常规设置" class="headerlink" title="常规设置"></a>常规设置</h5><p>在电脑和移动设备使用USB连接的情况下，我们打开 设置 -&gt; 更多设置 -&gt; 开发者选项，开启开发者选项，找到下方调试选项，打开USB调试开关，此时下拉状态栏，如果看到有“已连接到USB调试”的会话，说明USB调试开启成功。</p>
+<h5 id="USB模式切换"><a href="#USB模式切换" class="headerlink" title="USB模式切换"></a>USB模式切换</h5><p>有些Android设备没有USB调试开关,检查一下开发者选项中是否有USB模式切换选项，一般有3个选项，Device模式，Host模式和跳帽模式。连接到OTG USB接口,打开USB模式切换选项，选中Device模式，下拉状态栏，看是否有“已连接到USB调试”会话，如果有的话，说明开启成功。</p>
+<h3 id="WIFI调试"><a href="#WIFI调试" class="headerlink" title="WIFI调试"></a>WIFI调试</h3><p>如果USB调试模式不可用的情况下也可以使用WIFI调试，WIFI调试分两种情况，一种是设备默认开启了5555端口，可以使用adb命令直连，另一种是需要开启5555端口后在使用adb连接。在同一局域网下，查看一下移动设备IP地址，在电脑端尝试使用adb命令连接下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb connect 192.168.x.x</span><br></pre></td></tr></table></figure>
 
-<p>如果你想以“你的站点名+文章标题”显示，你可以修改成这样。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: :title/</span><br></pre></td></tr></table></figure>
+<p>如果连接成功，说明设备已开启了5555端口，可以直接通过电脑进行安装和调试程序。</p>
+<p>如果提示连接超时，还需要下载<a href="https://github.com/jackpal/Android-Terminal-Emulator" target="_blank" rel="noopener">Android-Terminal-Emulator</a>客户端，使用命令开启5555端口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">su </span><br><span class="line">setprop service.adb.tcp.port 5555 </span><br><span class="line">stop adbd </span><br><span class="line">start adbd</span><br></pre></td></tr></table></figure>
 
-<p>（参考来源：<a href="https://www.cnblogs.com/php-linux/p/8493181.html" target="_blank" rel="noopener">cnblogs</a>）</p>
-<h3 id="2-提交搜索引擎收录"><a href="#2-提交搜索引擎收录" class="headerlink" title="2.提交搜索引擎收录"></a>2.提交搜索引擎收录</h3><p>这里以Google为例，注册登录<a href="https://search.google.com/search-console?utm_source%3Dabout-page" target="_blank" rel="noopener">Google Search Console</a></p>
-<h5 id="2-1-添加资源"><a href="#2-1-添加资源" class="headerlink" title="2.1 添加资源"></a>2.1 添加资源</h5><p><img src="/image/GoogleSearchConsole1.png" alt="添加资源"></p>
-<p>这里有两种资源类型：网域和网址前缀。因网域需要验证DNS,所以我这里是以网址前缀方式添加的网址，这里大家根据自己情况自行添加。</p>
-<h5 id="2-2-进行验证"><a href="#2-2-进行验证" class="headerlink" title="2.2 进行验证"></a>2.2 进行验证</h5><p>验证的目的是证明你的身份，相当于对其授权，然后才可进行收录。</p>
-<p>目前Google提供5种验证方式，可以使用其中一种验证，也可以使用多种方式联合验证，官方推荐多种验证。</p>
-<p>这五种验证方式是：</p>
-<ul>
-<li>HTML文件</li>
-<li>HTML标记</li>
-<li>Google Analytics(分析)</li>
-<li>Google Tag Manager</li>
-<li>域名提供商</li>
-</ul>
-<p>其中HTML文件验证是Google帮你的站点生成一个html文件，你需要下载这个文件，不要做任何修改，并把其上传到你的站点根目录下。(你可以把其放在source文件夹下，并在_config.yml中的skip_render字段中配置白名单，避免Hexo对其渲染)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">skip_render: </span><br><span class="line">            - <span class="string">'README.md'</span></span><br><span class="line">            - <span class="string">'404.html'</span></span><br><span class="line">            - <span class="string">'google-xxxxxx.html'</span></span><br></pre></td></tr></table></figure>
-
-<p>HTML标记验证法则是Google生成标记代码，你把它放到你网站<code>&lt;head&gt;&lt;/head&gt;</code>标签内就好了,其格式如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta name=<span class="string">"google-site-verification"</span> content=<span class="string">"5aej_kTWDvPgwTNmtrfBDpip0z8t-ARz8Gzw"</span>&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
-
-<p>我在这里是采用了HTML文件和HTML标记两种方式验证的，上传或者添加好代码之后，点击验证，如果你没配置错误的话，这时候应该很快显示验证通过了。是不是想要立马到搜索引擎上搜索一下自己的网站呢，不过别着急，一般是需要24小时的时间才可以查看数据的，所以耐心等待吧！</p>
-<h3 id="3-站点地图"><a href="#3-站点地图" class="headerlink" title="3.站点地图"></a>3.站点地图</h3><p>站点地图是一个网站所有链接的容器。随着网站规模越大层次越深，搜索引擎很难抓取网站数据，通过站点地图则可以很好的给搜索引擎指明方向，更好的收录我们的页面。</p>
-<h5 id="3-1-安装插件"><a href="#3-1-安装插件" class="headerlink" title="3.1 安装插件"></a>3.1 安装插件</h5><p>打开站点根目录，打开命令行，分别执行下面代码安装Google和百度的站点地图插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save 		//Gooogle</span><br><span class="line">$ npm install hexo-generator-baidu-sitemap --save	//百度</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-2-添加配置"><a href="#3-2-添加配置" class="headerlink" title="3.2 添加配置"></a>3.2 添加配置</h5><p>在根目录_config.yml中添加站点地图的配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Plugins:</span><br><span class="line">- hexo-generator-baidu-sitemap</span><br><span class="line">- hexo-generator-sitemap</span><br><span class="line"></span><br><span class="line">baidusitemap:</span><br><span class="line">    path: baidusitemap.xml</span><br><span class="line">sitemap:</span><br><span class="line">    path: sitemap.xml</span><br></pre></td></tr></table></figure>
-
-<p>配置好了，重新部署一下我们就可以看到public目录下生成了baidusitemap.xml和sitemap.xml。这时候重新发布就可以了。如果没有看到生成站点地图，还请排查一下问题吧。</p>
-<h5 id="3-3-上传搜索引擎"><a href="#3-3-上传搜索引擎" class="headerlink" title="3.3 上传搜索引擎"></a>3.3 上传搜索引擎</h5><p>打开Google Search Console控制台，找到站点地图，确保你的站点地图能访问到。把相应的网址提交到你的控制台上就可以了。</p>
+<p>执行完命令后，在使用adb connect 命令连接即可。</p>
+<p>USB有线连接传输速度比WIFI连接快很多，优先推荐使用USB连接，可以根据情况而定。</p>
 </section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#Hexo" >
-    <span class="tag-code">Hexo</span>
+  <a href="/tags#Android" >
+    <span class="tag-code">Android</span>
+  </a>
+
+  <a href="/tags#设置" >
+    <span class="tag-code">设置</span>
+  </a>
+
+  <a href="/tags#USB调试模式" >
+    <span class="tag-code">USB调试模式</span>
   </a>
 
       </div>
@@ -217,20 +202,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/have-a-nice-day/">
+      <a class="nav-left" href="/2019/10/react-native-get-app-version/">
         <span class="nav-arrow">← </span>
-        
-          没事来这喂喂鱼吧
-        
-      </a>
-    
-    
-      <a class="nav-right" href="/2019/react-native-get-app-version/">
         
           React Native 获取App版本号
         
-        <span class="nav-arrow"> →</span>
       </a>
+    
     
   </div>
 
@@ -270,21 +248,12 @@
   <!-- Article END -->
   <!-- Catalog START -->
   
-    <aside class="catalog-container">
-  <div class="toc-main">
-    <strong class="toc-title">Catalog</strong>
-    
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-修改文章链接"><span class="toc-nav-text">1.修改文章链接</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-提交搜索引擎收录"><span class="toc-nav-text">2.提交搜索引擎收录</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-1-添加资源"><span class="toc-nav-text">2.1 添加资源</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-2-进行验证"><span class="toc-nav-text">2.2 进行验证</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-站点地图"><span class="toc-nav-text">3.站点地图</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3-1-安装插件"><span class="toc-nav-text">3.1 安装插件</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3-2-添加配置"><span class="toc-nav-text">3.2 添加配置</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3-3-上传搜索引擎"><span class="toc-nav-text">3.3 上传搜索引擎</span></a></li></ol></li></ol></li></ol>
-    
-  </div>
-</aside>
-  
   <!-- Catalog END -->
 </main>
 
 <script>
   (function () {
-    var url = 'http://thinkan.top/2019/hexo-configuration/';
+    var url = 'http://thinkan.top/2020/06/Android-USB-Debugging-Mode/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -350,7 +319,7 @@
 </div>
     <footer class="app-footer">
   <p class="copyright">
-    &copy; 2019 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a>&nbsp;|&nbsp;
+    &copy; 2020 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a>&nbsp;|&nbsp;
 	
          Page <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Hits
     
